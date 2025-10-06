@@ -1,6 +1,7 @@
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using Unity.Mathematics;
+using UnityEngine;
 
 public class BattleTeamData
 {
@@ -22,6 +23,7 @@ public class BattleTeamData
     public ITurnParticipant GetRandomAliveMember()
     {
         var alive = Members.Where(m => m.IsAlive).ToList();
-        return alive.Count > 0 ? alive[Random.Range(0, alive.Count)] : null;
+        // không nên dùng random vì là game turn base không thể ngẫu nhiên lượt
+        return alive.Count > 0 ? alive[UnityEngine.Random.Range(0, alive.Count)] : null;
     }
 }

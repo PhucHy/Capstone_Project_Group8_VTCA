@@ -1,7 +1,6 @@
 ﻿using System.Collections;
 using UnityEngine;
 using Unity.Cinemachine;
-
 public enum BattleState3D
 {
     Start,
@@ -36,7 +35,7 @@ public class BattleHandler_TurnBaseCore : MonoBehaviour
     [SerializeField] protected AudioSource _impactSound;
     [SerializeField] protected AudioSource _victoryMusic;
     [SerializeField] protected AudioSource _skipTurnSound;
-
+    
     [Header("SETTINGS")]
     [SerializeField] protected float _timePerTurn = 20f;
     [SerializeField] protected float _transitionDelay = 2f;
